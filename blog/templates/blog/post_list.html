@@ -12,7 +12,18 @@
 
     </nav>
     <content>
-        <p>Stuff goes here %% username %%!</p>
+        <p>Stuff goes here!</p>
+        <div>
+
+            {% for post in posts %}
+                <div class="post">
+                <p class="Published">Published: {{  post.published_date }}</p>
+                <h1 class="postTitle"><a href=""">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+
+                </div>
+            {% endfor %}
+        </div>
     </content>
     <footer>
         <p>Copyright Us 2018</p>
